@@ -1,0 +1,28 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; background: #f5f6fa; color: #1f2937; }
+.container { max-width: 1100px; margin: 0 auto; padding: 24px; }
+header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+nav button { margin-left: 8px; padding: 8px 16px; border: 0; border-radius: 8px; background: #e5e7eb; cursor: pointer; }
+nav button.active { background: #4f46e5; color: #fff; }
+.card { background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 1px 4px rgba(0,0,0,.08); margin-bottom: 20px; display: flex; flex-direction: column; gap: 12px; }
+.row { display: flex; gap: 12px; } .row input { flex: 1; }
+input, textarea { padding: 10px; border: 1px solid #d1d5db; border-radius: 8px; font: inherit; }
+.file { border: 2px dashed #c7d2fe; padding: 16px; text-align: center; border-radius: 8px; cursor: pointer; }
+.file input { display: none; }
+.primary { background: #4f46e5; color: #fff; border: 0; padding: 10px 18px; border-radius: 8px; cursor: pointer; font-weight: 600; }
+.primary:disabled { opacity: .6; cursor: default; }
+.error { color: #dc2626; margin: 0; }
+.score { width: 110px; height: 110px; border: 6px solid; border-radius: 50%; display: grid; place-items: center; font-size: 34px; font-weight: 700; align-self: center; }
+.score small { font-size: 14px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { padding: 3px 10px; border-radius: 999px; font-size: 13px; }
+.chip.ok { background: #dcfce7; color: #166534; } .chip.bad { background: #fee2e2; color: #991b1b; }
+.bullet { background: #f9fafb; padding: 12px; border-radius: 8px; }
+.bullet p { margin: 4px 0; } .old { color: #991b1b; } .new { color: #166534; font-weight: 500; } .why { font-size: 13px; color: #6b7280; }
+.add { margin-bottom: 16px; }
+.board { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; align-items: start; }
+.column { background: #e5e7eb; border-radius: 10px; padding: 10px; min-height: 300px; }
+.column h4 { margin: 0 0 10px; display: flex; justify-content: space-between; }
+.kcard { position: relative; background: #fff; padding: 10px; border-radius: 8px; margin-bottom: 8px; cursor: grab; box-shadow: 0 1px 2px rgba(0,0,0,.1); font-size: 14px; }
+.kcard .x { position: absolute; top: 4px; right: 6px; border: 0; background: none; cursor: pointer; font-size: 16px; }
+@media (max-width: 900px) { .board { grid-template-columns: 1fr; } }
